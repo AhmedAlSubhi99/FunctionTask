@@ -174,109 +174,141 @@
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the C# Projects Tasks \n 1.Even Or Odd \n 2.Largest of Three Numbers \n 3.Temperature Converter \n 4.Simple Discount Calculator \n 5.Grading System \n 6.Swap Two Numbers \n 7.Days to Weeks and Days Converter \n 8.Electricity Bill Calculator \n 9.Simple Calculator \n 10.Exit ");
-            int Choice = int.Parse(Console.ReadLine());
 
-            switch (Choice)
+            while (true)
             {
-                
-                case 1:
-                    Console.WriteLine("Enter a number to check if it's even or odd:");
-                    int number = int.Parse(Console.ReadLine());
-                    string result = CheckEvenOrOdd(number);
-                    printValue(result);
-                    break;
+                Console.Clear();
+                Console.WriteLine("Welcome to the C# Projects Tasks");
+                Console.WriteLine("--------------------------------------------------");
+                Console.WriteLine("Select an option from the menu:");
+                Console.WriteLine("--------------------------------------------------");
+                Console.WriteLine("1. Check Even or Odd");
+                Console.WriteLine("2. Find Largest of Three Numbers");
+                Console.WriteLine("3. Convert Celsius to Fahrenheit");
+                Console.WriteLine("4. Calculate Discount");
+                Console.WriteLine("5. Determine Grade");
+                Console.WriteLine("6. Swap Two Numbers");
+                Console.WriteLine("7. Convert Days to Weeks and Days");
+                Console.WriteLine("8. Calculate Electricity Bill");
+                Console.WriteLine("9. Simple Calculator");
+                Console.WriteLine("10. Exit");
+                Console.WriteLine("--------------------------------------------------");
+                Console.WriteLine("Please select an option from the menu above (1-10):");
+                Console.WriteLine("--------------------------------------------------");
+                Console.Write("Enter your choice: ");
+                int choice = int.Parse(Console.ReadLine());
+                Console.WriteLine("--------------------------------------------------");
+                switch (choice)
+                {
+                    // Check Even or Odd
+                    case 1:
+                        Console.WriteLine("Enter a number to check if it's even or odd:");
+                        int number = int.Parse(Console.ReadLine());
+                        string result = CheckEvenOrOdd(number);
+                        printValue(result);
+                        break;
 
-                case 2:
-                    Console.WriteLine("Enter three numbers to find the largest:");
-                    Console.Write("Number 1: ");
-                    int num1 = int.Parse(Console.ReadLine());
-                    Console.Write("Number 2: ");
-                    int num2 = int.Parse(Console.ReadLine());
-                    Console.Write("Number 3: ");
-                    int num3 = int.Parse(Console.ReadLine());
-                    string result1 = FindLargestOfThree(num1, num2, num3);
-                    printValue(result1);
-                    break;
+                    // Find Largest of Three Numbers
+                    case 2:
+                        Console.WriteLine("Enter three numbers to find the largest:");
+                        Console.Write("Number 1: ");
+                        int num1 = int.Parse(Console.ReadLine());
+                        Console.Write("Number 2: ");
+                        int num2 = int.Parse(Console.ReadLine());
+                        Console.Write("Number 3: ");
+                        int num3 = int.Parse(Console.ReadLine());
+                        string result1 = FindLargestOfThree(num1, num2, num3);
+                        printValue(result1);
+                        break;
 
-                case 3:
-                    Console.WriteLine("Enter temperature in Celsius to convert to Fahrenheit:");
-                    double celsius = double.Parse(Console.ReadLine());
-                    double result3 = ConvertTemperature(celsius);
-                    printValue(result3);
-                    break;
+                    // Convert Celsius to Fahrenheit
+                    case 3:
+                        Console.WriteLine("Enter temperature in Celsius to convert to Fahrenheit:");
+                        double celsius = double.Parse(Console.ReadLine());
+                        double result3 = ConvertTemperature(celsius);
+                        printValue(result3);
+                        break;
 
-                case 4:
-                    Console.WriteLine("Enter the original price:");
-                    double originalPrice = double.Parse(Console.ReadLine());
-                    Console.WriteLine("Enter the discount percentage:");
-                    double discountPercentage = double.Parse(Console.ReadLine());
-                    double resul4 = CalculateDiscount(originalPrice, discountPercentage);
-                    printValue(resul4);
-                    break;
+                    // Calculate Discount
+                    case 4:
+                        Console.WriteLine("Enter the original price:");
+                        double originalPrice = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter the discount percentage:");
+                        double discountPercentage = double.Parse(Console.ReadLine());
+                        double resul4 = CalculateDiscount(originalPrice, discountPercentage);
+                        printValue(resul4);
+                        break;
 
-                case 5:
-                    Console.WriteLine("Enter marks to determine the grade:");
-                    int marks = int.Parse(Console.ReadLine());
-                    string result5 = DetermineGrade(marks);
-                    printValue(result5);
-                    break;
+                    // Determine Grade               
+                    case 5:
+                        Console.WriteLine("Enter marks to determine the grade:");
+                        int marks = int.Parse(Console.ReadLine());
+                        string result5 = DetermineGrade(marks);
+                        printValue(result5);
+                        break;
 
-                case 6:
-                    Console.WriteLine("Enter two numbers to swap:");
-                    Console.Write("Number 1: ");
-                    int swapNum1 = int.Parse(Console.ReadLine());
-                    Console.Write("Number 2: ");
-                    int swapNum2 = int.Parse(Console.ReadLine());
-                    int swappedNum = SwapNumbers(swapNum1, swapNum2);
-                    printValue(swapNum1, swapNum2);
-                    break;
+                    // Swap Two Numbers
+                    case 6:
+                        Console.WriteLine("Enter two numbers to swap:");
+                        Console.Write("Number 1: ");
+                        int swapNum1 = int.Parse(Console.ReadLine());
+                        Console.Write("Number 2: ");
+                        int swapNum2 = int.Parse(Console.ReadLine());
+                        int swappedNum = SwapNumbers(swapNum1, swapNum2);
+                        printValue(swapNum1, swapNum2);
+                        break;
 
-                case 7:
-                    Console.WriteLine("Enter the number of days to convert to weeks and days:");
-                    int days = int.Parse(Console.ReadLine());
-                    string result7 = ConvertDaysToWeeksAndDays(days);
-                    printValue(result7);
-                    break;
+                    // Convert Days to Weeks and Days
+                    case 7:
+                        Console.WriteLine("Enter the number of days to convert to weeks and days:");
+                        int days = int.Parse(Console.ReadLine());
+                        string result7 = ConvertDaysToWeeksAndDays(days);
+                        printValue(result7);
+                        break;
 
-                case 8:
-                    Console.WriteLine("Enter the number of units consumed:");
-                    double units = double.Parse(Console.ReadLine());
-                    double billAmount = CalculateElectricityBill(units);
-                    printValue(billAmount);
-                    break;
+                    // Calculate Electricity Bill
+                    case 8:
+                        Console.WriteLine("Enter the number of units consumed:");
+                        double units = double.Parse(Console.ReadLine());
+                        double billAmount = CalculateElectricityBill(units);
+                        printValue(billAmount);
+                        break;
 
-                case 9:
-                    Console.WriteLine("Enter two numbers for the calculator:");
-                    Console.Write("Number 1: ");
-                    double calcNum1 = double.Parse(Console.ReadLine());
-                    Console.Write("Number 2: ");
-                    double calcNum2 = double.Parse(Console.ReadLine());
-                    Console.WriteLine("Enter the operation (+, -, *, /):");
-                    string op = Console.ReadLine();
-                    string result9 = SimpleCalculator(calcNum1, calcNum2, op);
-                    if (result9 == "Error: Division by zero.")
-                    {
-                        printNotValue(result9);
-                    }
-                    else
-                    {
-                        printValue(result9);
-                    }
-                    break;
+                    // Simple Calculator
+                    case 9:
+                        Console.WriteLine("Enter two numbers for the calculator:");
+                        Console.Write("Number 1: ");
+                        double calcNum1 = double.Parse(Console.ReadLine());
+                        Console.Write("Number 2: ");
+                        double calcNum2 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter the operation (+, -, *, /):");
+                        string op = Console.ReadLine();
+                        string result9 = SimpleCalculator(calcNum1, calcNum2, op);
+                        if (result9 == "Error: Division by zero.")
+                        {
+                            printNotValue(result9);
+                        }
+                        else
+                        {
+                            printValue(result9);
+                        }
+                        break;
 
-                case 10:
-                    Console.WriteLine("Exiting the program. Goodbye!");
-                    Console.WriteLine("Press any key to exit.");
-                    Console.ReadKey();
-                    return;
+                    // Exit
+                    case 10:
+                        Console.WriteLine("Exiting the program. Goodbye!");
+                        Console.WriteLine("Press any key to exit.");
+                        Console.ReadKey();
+                        return;
 
-                default:
-                    Console.WriteLine("Invalid choice. Please select a valid option.");
-                    break;
+                    // Invalid choice
+                    default:
+                        Console.WriteLine("Invalid choice. Please select a valid option.");
+                        break;
+                }
+                Console.WriteLine("Press any key to exit.");
+                Console.ReadLine();
             }
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadLine();
         }
     }
 }
