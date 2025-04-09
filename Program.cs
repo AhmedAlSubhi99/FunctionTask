@@ -81,7 +81,7 @@
         }
 
         // Function to swap two numbers
-        public static int SwapNumbers(int num1, int num2)
+        public static int SwapNumbers(ref int num1,ref int num2)
         {
             int temp = num1;
             num1 = num2;
@@ -165,7 +165,7 @@
         }
         public static void printValue(int input, int input2)
         {
-            Console.WriteLine("the result of this operation is: " + input + " " + input2);
+            Console.WriteLine("the result of this operation is: " + "Num1 = " + input + "   " + "Num2 = " + input2);
         }
 
         public static void printNotValue(string input)
@@ -254,7 +254,7 @@
                         int swapNum1 = int.Parse(Console.ReadLine());
                         Console.Write("Number 2: ");
                         int swapNum2 = int.Parse(Console.ReadLine());
-                        int swappedNum = SwapNumbers(swapNum1, swapNum2);
+                        SwapNumbers(ref swapNum1, ref swapNum2);
                         printValue(swapNum1, swapNum2);
                         break;
 
