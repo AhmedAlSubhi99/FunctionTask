@@ -117,6 +117,7 @@ namespace FunctionTask
             }
             return billAmount;
         }
+
         // Function to perform basic arithmetic operations
         public static string SimpleCalculator(double num1, double num2, string op)
         {
@@ -164,6 +165,7 @@ namespace FunctionTask
                 return number * Factorial(number - 1);
             }
         }
+
         // Function to perform basic ATM operations
         public static string BasicATM(double balance, string operation, double amount)
         {
@@ -201,6 +203,7 @@ namespace FunctionTask
                 }
             }
         }
+
         // Function to calculate Geometry Calculator Circle, Square, and Triangle
         public static string GeometryCalculatorCircle(double r, out double Area, out double Circumference)
         {
@@ -267,9 +270,6 @@ namespace FunctionTask
         }
 
 
-
-
-
         // Function to print a pattern
         public static string PrintPattern(int rows)
         {
@@ -283,6 +283,7 @@ namespace FunctionTask
             }
             return "Pattern printed successfully.";
         }
+
         // Function to print a pyramid pattern
         public static string PrintPyramid(int rows)
         {
@@ -300,6 +301,7 @@ namespace FunctionTask
             }
             return "Pyramid pattern printed successfully.";
         }
+
         // Function to print a diamond pattern
         public static string PrintDiamond(int rows)
         {
@@ -331,6 +333,7 @@ namespace FunctionTask
             }
             return "Diamond pattern printed successfully.";
         }
+
         // Function to play a guessing game
         public static string GuessGame(int numberToGuess, int userGuess, int numberOfTries)
         {
@@ -347,6 +350,7 @@ namespace FunctionTask
                 return "Too high! Try again.";
             }
         }
+
         // Function to print the result of an operation
         public static void printValue(string input)
         {
